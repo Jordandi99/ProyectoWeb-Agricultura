@@ -2,6 +2,6 @@
 $host = "localhost";
 $usuario = "root";
 $clave = "";
-$bd = "BD_Agricultura";
+$bd = "agricultura";
 $conexion = mysqli_connect($host, $usuario, $clave, $bd);
 ?>
