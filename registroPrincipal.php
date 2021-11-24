@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link center" href="index.php">Regresar</a>
+                <a class="nav-link center" href="login.php">Regresar</a>
             </li>
         </ul>
     </div>
@@ -63,12 +63,20 @@
                 <input type="text" class="form-control item" id="edadLec" placeholder="Edad">
             </div>
             <div class="form-group">
+                <select class="form-control item" id="generoLec">
+                    <option value="0" select>Seleccione una opción</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="No deseo especificar">No deseo especificar</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <select class="form-control item" id="categoriaLec">
-                    <option select>Seleccione una opción</option>
-                    <option value="1">Maquinaria</option>
-                    <option value="2">Productos</option>
-                    <option value="3">Plagas</option>
-                    <option value="4">Cultivos</option>
+                    <option value="0" select>Seleccione una opción</option>
+                    <option value="Maquinaria">Maquinaria</option>
+                    <option value="Productos">Productos</option>
+                    <option value="Plagas">Plagas</option>
+                    <option value="Cultivos">Cultivos</option>
                 </select>
             </div>
             <div class="form-group form-check text-center">
@@ -77,7 +85,7 @@
             </div>
 
             <div class="form-group">
-                <button type="button" class="btn btn-block create-user">Terminar Registro</button>
+                <button type="button" id="btnLector" class="btn btn-block create-user">Terminar Registro</button>
             </div>
         </form>
     </div>
@@ -101,10 +109,10 @@
             </div>
             <div class="form-group">
                 <select class="form-control item" id="generoEsc">
-                    <option select>Seleccione una opción</option>
-                    <option value="1">Masculino</option>
-                    <option value="2">Femenino</option>
-                    <option value="3">No deseo especificar</option>
+                    <option value="0" select>Seleccione una opción</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="No deseo especificar">No deseo especificar</option>
                 </select>
             </div>
             <div class="form-group">
@@ -118,11 +126,11 @@
             </div>
             <div class="form-group">
                 <select class="form-control item" id="categoriaEsc">
-                    <option select>Seleccione una opción</option>
-                    <option value="1">Maquinaria</option>
-                    <option value="2">Productos</option>
-                    <option value="3">Plagas</option>
-                    <option value="4">Cultivos</option>
+                    <option value="0" select>Seleccione una opción</option>
+                    <option value="Maquinaria">Maquinaria</option>
+                    <option value="Productos">Productos</option>
+                    <option value="Plagas">Plagas</option>
+                    <option value="Cultivos">Cultivos</option>
                 </select>
             </div>
             <div class="form-group form-check text-center">

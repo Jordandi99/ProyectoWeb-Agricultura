@@ -9,12 +9,8 @@ $rol=$_POST['rol'];
 
 $nombre=$_POST['nombre'];
 $ap=$_POST['apellido'];
-$rfc=$_POST['rfc'];
 $edad=$_POST['edad'];
 $genero=$_POST['genero'];
-$dir=$_POST['direccion'];
-$tel=$_POST['telefono'];
-$ref=$_POST['referencias'];
 $cat=$_POST['categoria'];
 
 $sql="INSERT into usuarios (correo,username,contra,rol)
@@ -28,8 +24,8 @@ $resultado4 = mysqli_query($conexion, $consultide);
 $ide = mysqli_fetch_row($resultado4);
 //Insertar usuario
 
-$sql2="INSERT into escritor (id_usuario,nombre,apeP,rfc,edad,genero,direccion,telefono,referencias,tema_interes_cat)
-                  values ('$ide[0]','$nombre','$ap','$rfc','$edad','$genero','$dir','$tel','$ref','$cat')";
+$sql2="INSERT into lector (id_usuario,nombre,apeP,edad,genero,tema_interes_cat)
+                  values ('$ide[0]','$nombre','$ap','$edad','$genero','$cat')";
 
  echo $resultado2=mysqli_query($conexion,$sql2);
 
