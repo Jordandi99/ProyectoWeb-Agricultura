@@ -21,6 +21,35 @@
     </div>
 </nav>
 
+<div class="container">
+
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Terminos y Condiciones</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body" id="modal-body">
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" id = "btnModal" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
     <div class="registration-form" id="principal">
         <form>
             <div class="form-icon">
@@ -81,7 +110,7 @@
             </div>
             <div class="form-group form-check text-center">
                 <input type="checkbox" class="form-check-input" id="terminosLec">
-                <label class="form-check-label" for="terminos">Aceptar los <a class="" href="tycLector.php">Terminos y Condiciones</a></label>
+                <label class="form-check-label" for="terminos">Aceptar los <a data-toggle="modal" data-target="#myModal" class="" id="tycLec" href="#">Terminos y Condiciones</a></label>
             </div>
 
             <div class="form-group">
@@ -135,7 +164,7 @@
             </div>
             <div class="form-group form-check text-center">
                 <input type="checkbox" class="form-check-input" id="terminos">
-                <label class="form-check-label" for="terminos">Aceptar los <a class="" href="tycEscritor.php">Terminos y Condiciones</a></label>
+                <label class="form-check-label" for="terminos">Aceptar los <a data-toggle="modal" data-target="#myModal" class="" id="tycEsc" href="#">Terminos y Condiciones</a></label>
             </div>
 
             <div class="form-group">

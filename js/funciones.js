@@ -111,5 +111,32 @@ $( document ).ready(function() {
         });
     
     }
+    var tycLec = "<p><strong>Al registrarse como uno de nuestros lectores, aceptarás las siguientes normas de nuestra comunidad:</strong></p>"+
+    "<div class='main'>"+
+        "<lu>"+
+            "<li>Como lector de nuestra comunidad, solo prodrás interactuar con nuestros escritores, comentando en sus respectivos posts.</li>"+
+            "<li>Los comentarios que realice serán moderados por nuestro(s) administrador(es).</li>"+
+            "<li>Queda totalmente prohibido el uso de lenguaje altisonante o agresivo en el área de comentarios.</li>"+
+            "<li>De no cumplir con la norma anterior de nuestra comunidad, su cuenta será eliminada y su(s) comentario(s) serán eliminados del tablón.</li>"+
+        "</lu>";
+
+    var tycEsc = "<p><strong>Al registrarse como escritor en el sitio, aceptarás las siguientes normas de nuestra comunidad:</strong></p>"+
+    "<div class='main'>"+
+        "<lu>"+
+            "<li>Como escritor deberás iniciar sesión en el sitio para ser capaz de de publicar articulos.</li>"+
+            "<li>Una vez creado su usuario, no podrá modificar algunos de sus datos personales, por lo que le pedimos sea cuidados@ a la hora de registrarse.</li>"+
+            "<li>Queda prohibido el uso de palabras altisonantes en la redacción de sus artículos.</li>"+
+            "<li>De no cumplir estos lineamientos, es posible que su usuario sea eliminado del sitio, junto con todos los articulos publicados bajo el mismo.</li>"+
+        "</lu>";
+
+    $("#tycLec").click(function(e){
+        $("#modal-body").append(tycLec);
+    });
+    $("#tycEsc").click(function(e){
+        $("#modal-body").append(tycEsc);
+    });
+    $("#btnModal").click(function(e){
+        $("#modal-body").empty();
+    });
         
 });
