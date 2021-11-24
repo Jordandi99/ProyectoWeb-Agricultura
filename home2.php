@@ -15,10 +15,10 @@
      
 <body>
 
-    <div class="container-fluid">
-        <div class="jumbotron-fluid" style="background-color:#006c17; padding-bottom: 20px;">
+    <div class="jumbotron-fluid">
+        <div class="jumbotron-fluid" style="background-color:#006c17; padding-bottom: 30px;">
          <font color="white">
-            <h1 class="text-center">Mi blog</h1>
+            <h1 class="text-center" style="padding-top: 40px;">Agricultores de esperanza</h1>
         </font>
 
         </div>
@@ -27,18 +27,20 @@
            
             <a href="#" class="nav-item dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list"></i> Categorias</a>
             <div class="dropdown-menu">
-                <a href="#" class="dropdown-item">Categoria 1</a>
-                <a href="#" class="dropdown-item">Categoria 2</a>
-                <a href="#" class="dropdown-item">Categoria 3</a>
-                <a href="#" class="dropdown-item">Categoria 4</a>
+                <a href="#" class="dropdown-item">Maquinaria</a>
+                <a href="#" class="dropdown-item">Productos</a>
+                <a href="#" class="dropdown-item">Plagas</a>
+                <a href="#" class="dropdown-item">Cultivo</a>
             </div>
-            <a href="#" class="nav-item nav-link"><i class="fa fa-user"></i> Iniciar Sesion</a>
+            <a href="#" class="nav-item nav-link"><i class="fa fa-user"></i> Nosotros</a>
             <a href="#" class="nav-item nav-link" data-toggle="modal" data-target="#myModal"><i class="fa fa-address-book"></i> Registrarse </a>
             <a href="#" class="nav-item nav-link"> <i class="fa fa-home"></i> Inicio</a>
         </nav>
             <form class="form-inline">
                 <input class="form-control mr-sm-auto" type="search" placeholder="Buscar" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                &nlsim;&nlsim;  
+                <button class="btn btn-success" >Iniciar sesion </button>
             </form>
         </nav>
 
