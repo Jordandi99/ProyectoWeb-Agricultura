@@ -45,16 +45,17 @@ $( document ).ready(function() {
         agregarDatosEscritor();
     });
 
-    function agregarDatosEscritor(correo,user,pass,rol,nombre,apellido,rfc,edad,genero,direccion,telefono,referencias,categoria) {
+    function agregarDatosEscritor() {
         cadena = "correo=" + $("#correo").val() + "&user=" + $("#user").val() + "&pass=" + $("#password").val() + "&rol=" + $("#selectRol").val()
         + "&nombre=" + $("#nombreEsc").val() + "&apellido=" + $("#apellidoEsc").val() + "&rfc=" + $("#rfcEsc").val() + "&edad=" + $("#edadEsc").val()
         + "&genero=" + $("#generoEsc").val() + "&direccion=" + $("#direccionEsc").val() + "&telefono=" + $("#telefonoEsc").val() + "&referencias=" + $("#referenciasEsc").val()
         + "&categoria=" + $("#categoriaEsc").val();
         $.ajax({
             type: "POST",
-            url: "../include/registrarUsuario.php",
+            url: "include/registrarUsuario.php",
             data: cadena,
             success: function (r) {
+                console.log(r);
                 if (r == 1) {
                     alertify.success("Datos agregados con exito");
                    
