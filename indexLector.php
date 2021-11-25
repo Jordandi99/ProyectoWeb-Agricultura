@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 require_once 'include/head.php';
 require_once 'include/conexion.php';
@@ -155,6 +156,5 @@ session_start();
             </table>
 
 </body>
-
 
 </html>

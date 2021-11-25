@@ -1,3 +1,4 @@
+
 <?php require_once 'include/head.php'; ?>
 <link rel="stylesheet" href="css/estilos_home.css">
 <title>Inicio Escritor</title>
@@ -108,5 +109,4 @@ $userN = $_SESSION['username'];
     </div>
 
 </body>
-
 </html>
