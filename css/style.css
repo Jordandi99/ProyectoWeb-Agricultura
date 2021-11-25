@@ -1,0 +1,162 @@
+img{
+    max-width: 100%;
+}
+
+body{
+    background: #afafaf;
+    min-height: 100vh;
+}
+
+h1.header-ed{
+    padding: 31px 0px 25px;
+    font-size: 53px;
+    text-align: center;
+    text-transform: capitalize;
+    text-shadow: 2px 3px rgb(216, 216, 216);
+    letter-spacing: normal;
+}
+
+.art-right-ed h2{
+    font-size: 33px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.art-bothside{
+    width: 70%;
+    margin: 0em auto;
+    box-shadow: -2xp 7px 37px 8px rgba(0, 0, 0, 0.52);
+    background: rgb(211, 211, 211);
+}
+
+.mid-cls{
+    display: flex;
+    -webkit-justify-content:space-between;
+    justify-content: space-between;
+}
+
+.art-left-ed, .art-right-ed{
+    padding: 3em 2em 3em;
+}
+
+.art-left-ed, .art-right-ed{
+    flex-basis: 50%;
+    -webkit-flex-basis: 50%;
+}
+
+.art-left-ed{
+    text-align: center;
+}
+
+.form-left-to-em input[type="text"], 
+.form-left-to-em input[type="number"],
+.form-right-ed input[type="text"]{
+    width: 100%;
+    color: black;
+    outline: none;
+    font-size: 14px;
+    padding: 1em 0em;
+    margin: 0px 0px 20px;
+    border: none;
+    border-bottom: 1px solid black;
+    -webkit-appearance: none;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.btnn {
+    text-align: center;
+}
+
+button[type="submit"]{
+    width: 40%;
+    background: #2196f3;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    padding: 15px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s all;
+    margin: 20px 0px 0px;
+}
+
+button[type="button"]{
+    width: 40%;
+    background: #f44336;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    padding: 15px 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s all;
+    margin: 20px 0px 0px;
+}
+
+button:hover{
+    color: grey;
+    background: black;
+}
+
+.footer{
+    padding: 39px 0px;
+}
+
+.footer p{
+    margin: 0em;
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+/* Resposividad */
+@media (max-width: 1920px){
+    h1.header-ed{
+        font-size: 60px;
+    }
+    .art-left-ed h2{
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1680px){
+    h1.header-ed{
+        font-size: 57px;
+    }
+    .art-left-ed h2{
+        font-size: 37px;
+    }
+}
+
+@media (max-width: 1600px){
+    h1.header-ed{
+        font-size: 53px;
+    }
+    .art-left-ed{
+        font-size: 33px;
+    }
+}
+
+@media (max-width: 1440px){
+    .art-bothside{
+        width: 70%;
+    }
+    h1.header-ed{
+        letter-spacing: 3px;
+    }
+    button[type="submit"]{
+        width: 37%;
+    }
+    button[type="button"]{
+        width: 37%;
+    }
+}
