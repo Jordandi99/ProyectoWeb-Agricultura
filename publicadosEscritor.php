@@ -48,7 +48,7 @@ $userN = $_SESSION['username'];
         </div>
         <div class="card-body">
 
-            <table class="table table-hover table-dark">
+            <table class="table table-bordered table-dark table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Autor</th>
