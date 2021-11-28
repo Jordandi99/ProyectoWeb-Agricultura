@@ -46,7 +46,7 @@
 }
 
 body {
-    background-color: #e1cfa9;
+    background-color: #669933;
 }
 
 .Short {
@@ -110,10 +110,26 @@ body {
 
 }
 .card-body{
-    background: #FFCC33;
+    background: #dbd5c4;
+    width: 96%;
+    max-width: 96%;
+    align-self: center;
 }
 .card-header{
     background: #669933;
+    width: 100%;
+    max-width: 100%;
+    align-self: center;
+    text-transform: capitalize;
+    text-shadow: #dbd5c4;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-footer{
+    text-transform: capitalize;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 

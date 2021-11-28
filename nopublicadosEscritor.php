@@ -91,7 +91,7 @@ $userN = $_SESSION['username'];
                             <td><?php echo $mostrar[6] ?></td>
                             <td><?php echo $mostrar[7] ?></td>
                             <td>
-                                <button class="btn btn-warning" data-toggle="modal" data-target="#Meditar" onclick="agregaForm('<?php echo $datos ?>')">Editar</button>
+                                <button class="btn btn-info" data-toggle="modal" data-target="#Meditar" onclick="agregaForm('<?php echo $datos ?>')">Editar</button>
                             </td>
                             <td>
                                 <button class="btn btn-danger" onclick="pregunta('<?php echo $mostrar[0] ?>')">Eliminar</button>

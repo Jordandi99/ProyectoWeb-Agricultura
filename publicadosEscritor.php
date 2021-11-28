@@ -83,7 +83,7 @@ $userN = $_SESSION['username'];
                             <td><?php echo $mostrar[2] ?></td>
                             <td><?php echo $mostrar[3] ?></td>
                             <td>
-                                <button class="btn btn-warning" data-toggle="modal" data-target="#Mver" onclick="agregaFormv('<?php echo $datos ?>')">Visualizar</button>
+                                <button class="btn btn-info" data-toggle="modal" data-target="#Mver" onclick="agregaFormv('<?php echo $datos ?>')">Visualizar</button>
                             </td>
                             <td><?php echo $mostrar[5] ?></td>
                             <td><?php echo $mostrar[6] ?></td>
