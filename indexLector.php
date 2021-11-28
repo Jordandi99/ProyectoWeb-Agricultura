@@ -167,7 +167,7 @@ $userN = $_SESSION['username'];
                     <input type="text" hidden="true" id="idAuto" name="idAuto">
                     <div class="form-group">
                         <label for="ejemploArea">Fecha</label>
-                        <input type="text" class="form-control item" id="fechaC" name="fechaC">
+                        <input type="text" class="form-control item" id="fechaC" name="fechaC" value=" <?php echo $fecha ?>" disabled>
                     </div>
                     <textarea class="form-control" id="Txtarea1" name="Txtarea1" rows="5"></textarea>
 
