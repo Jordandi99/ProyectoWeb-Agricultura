@@ -53,42 +53,37 @@ $userN = $_SESSION['username'];
                     </tr>
                 </thead>
                 <tbody>
+
                     <?php
+
                     date_default_timezone_set('America/Mexico_City');
                     $fecha = date("Y-m-d");
-                    ?>
 
-                    <?php
-
-                    //consulta para visualizar articulo
-
-                    ////////////////////     1            2             3        4      5        6        7
-                    $articulo = "SELECT A.id_articulo,L.id_usuario,A.categoria,A.nom, A.cuerpo,E.nombre,E.apeP
-                    FROM lector L JOIN usuarios U
-                    ON (L.id_usuario=U.id_usuario)
-                    JOIN comentarios C
-                    ON (U.id_usuario=C.id_usuario)
+                    ////////////////////     0            1        2       3       4        5        
+                    $articulo = "SELECT A.id_articulo,A.categoria,A.nom,A.cuerpo, E.nombre,E.apeP
+                    FROM usuarios U JOIN escritor E
+                    ON (U.id_usuario=E.id_usuario)
                     JOIN articulo A
-                    ON (C.id_articulo=A.id_articulo)
-                    JOIN escritor E
-                    ON(A.id_escritor=E.id_escritor)";
+                    ON (E.id_escritor=A.id_escritor)
+                    WHERE  A.estatus='publicado' ";
 
                     $resultado = mysqli_query($conexion, $articulo);
                     while ($mostrar = mysqli_fetch_row($resultado)) {
                         $datos = $mostrar[0] . "||" . $mostrar[1] . "||" . $mostrar[2] . "||" . $mostrar[3]
-                            . "||" . $mostrar[4] . "||" . $mostrar[5] . "||" . $mostrar[6];
+                            . "||" . $mostrar[4] . "||" . $mostrar[5]
 
                     ?>
                         <tr>
 
-                            <td><?php echo $mostrar[3] ?></td>
-                            <td><?php echo $mostrar[6] . " " . $mostrar[7] ?></td>
-                            <td><?php echo $mostrar[4] ?></td>
+                            <td><?php echo $mostrar[1] ?></td>
+                            <td><?php echo $mostrar[4] . " " . $mostrar[5] ?></td>
+                            <td><?php echo $mostrar[2] ?></td>
                             <td>
                                 <button class="btn btn-primary" data-toggle="modal" data-target="#Mver" onclick="agregaFormv('<?php echo $datos ?>')">Visualizar</button>
                             </td>
                             <td>
-                                <button class="btn btn-primary">Agregar nuevo comentario</button>
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#NuevoComen" onclick="paraguardar('<?php echo $datos ?>')">Agregar nuevo comentario</button>
+
                             </td>
 
 
@@ -135,15 +130,17 @@ $userN = $_SESSION['username'];
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <input type="text" hidden="" id="idAuto" name="idAuto">
-                <input type="text" hidden="" id="idUsuario" name="idUsuario">
                 <div class="modal-body">
-                    <textarea class="form-control" id="Txtarea" name="Txtarea" rows="5" readonly></textarea>
+
+                    <input type="text" hidden="true" id="idAuto" name="idAuto" >
+                    <div class="form-group">
+                        <label for="ejemploArea">Fecha</label>
+                        <input type="text" class="form-control item" id="fechaC" name="fechaC" >
+                    </div>
+                    <textarea class="form-control" id="Txtarea1" name="Txtarea1" rows="5"></textarea>
+
                 </div>
-                <div class="form-group">
-                    <label for="ejemploArea">Fecha</label>
-                    <input type="text" class="form-control item" id="fechaC" name="fechaC" disabled>
-                </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal" id="Ncomen">
                         Publicar comentario
@@ -160,23 +157,31 @@ $userN = $_SESSION['username'];
 </html>
 
 <script>
-    $("#btnguardar").click(function(e) {
+    $("#Ncomen").click(function(e) {
+       
+    
         e.preventDefault();
         console.log($("#idAuto").val());
-        console.log($("#idUsuario").val());
-        console.log($("#Txtarea").val());
+        console.log($("#Txtarea1").val());
+        console.log($("#fechaC").val());
+        
 
         agregardatos();
+        
     });
 
 
     function agregardatos() {
-        cadena = "id_articulo=" + $("#idAuto").val() + "&id_usuario=" + $("#idUsuario").val() + "&comentario=" + $("#Txtarea").val() + "&fecha=" + $("#fechaC").val();
+        cadena1 = "id_articulo=" + $("#idAuto").val() + "&comentario=" + $("#Txtarea1").val() + "&fecha=" + $("#fechaC").val();
+        
         $.ajax({
             type: "POST",
             url: "include/agregarComentario.php",
-            data: cadena,
+            data: cadena1,
             success: function(r) {
+                window.alert(r);
+                window.alert("pasa aqui");
+
                 if (r == 1) {
                     alertify.success("Datos agregados con exito");
                     location.reload();
@@ -192,14 +197,19 @@ $userN = $_SESSION['username'];
 
 
     function agregaFormv(datos) {
+      
+        d = datos.split('||');
+        $('#Txtarea').val(d[3]);
+       
+    }
+
+    function paraguardar(datos){
         <?php
         date_default_timezone_set('America/Mexico_City');
-        $fecha = date("Y-m-d");
+        date("Y-m-d");
         ?>
         d = datos.split('||');
         $('#idAuto').val(d[0]);
-        $('#idUsuario').val(d[1]);
-        $('#Txtarea').val(d[5]);
-        $('#fechaC').val($fecha);
+      
     }
 </script>

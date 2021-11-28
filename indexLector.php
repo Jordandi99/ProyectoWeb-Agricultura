@@ -33,13 +33,7 @@ $userN = $_SESSION['username'];
                 <li class="nav-item">
                     <a class="nav-link" href="datosLector.php">Información</a>
                 </li>
-            
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="agregarEscritor.php">Registro de comentarios</a>
-                    <a class="dropdown-item" href="registroNuevoComentario.php">Escribir Comentario</a>
-                   
-                </div>
-
+                    <a class="dropdown-item" href="registroComentarios.php">Registro de comentarios</a>
                 <li class="nav-item">
                     <a class="nav-link" href="include/salir.php">Cerrar Sesión</a>
                 </li>
