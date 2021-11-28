@@ -19,8 +19,8 @@ session_start();
         </button>
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <form class="form-inline" action="/action_page.php">
-                <input class="form-control mr-sm-2" type="text" placeholder="Buscar Articulo">
+            <form class="form-inline" method="post" action="categorias/busqueda.php">
+                <input class="form-control mr-sm-2" name="busq" value="" type="text" placeholder="Buscar Articulo">
                 <button class="btn btn-success" type="submit">Buscar</button>
             </form>
         </nav>
@@ -32,9 +32,11 @@ session_start();
                         Categorias
                     </a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="agregarEscritor.php">Agregar</a>
-                        <a class="dropdown-item" href="publicadosEscritor.php">Publicados</a>
-                        <a class="dropdown-item" href="nopublicadosEscritor.php">No publicados</a>
+                        <a class="dropdown-item" href="categorias/maquinaria.php">Maquinaria</a>
+                        <a class="dropdown-item" href="categorias/producto.php">Productos</a>
+                        <a class="dropdown-item" href="categorias/plagas.php">Plagas</a>
+                        <a class="dropdown-item" href="categorias/cultivo.php">Cultivos</a>
+                        
                     </div>
                 </li>
                 <li class="nav-item">
@@ -100,7 +102,7 @@ session_start();
         <h1 class="text-center" style="color: white;"><strong> Articulos</strong></h1>
 
         <?php
-        $articulo = "SELECT E.nombre,E.apeP,A.categoria,A.nom,A.cuerpo,A.fecha,U.username
+        $articulo = "SELECT E.nombre,E.apeP,A.categoria,A.nom,A.cuerpo,A.fecha
                     FROM escritor E JOIN articulo A
                     ON (E.id_escritor=A.id_escritor)
                     JOIN usuarios U
@@ -115,16 +117,14 @@ session_start();
         ?>
             <div class="card text-center" style="margin-top: 50px;">
                 <div class="card-header">
-                    <strong style="color: white;> Autor: <?php echo $mostrar[0] . " " . $mostrar[1] ?> </strong>
-                    <?php echo $mostrar[3] ?>
+                    <strong style="color: white;"> Autor: <?php echo $mostrar[0] . " " . $mostrar[1] ?> </strong> 
                 </div>
                 <div class=" card-header">
                         <strong style="color: white;"> Categoria: <?php echo $mostrar[2] ?> </strong>
-                        <?php echo $mostrar[3] ?>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title"><Strong style="color: white;"> Titulo: <td><?php echo $mostrar[3] ?></td> </Strong></h5>
-                    <p class="card-text"> <?php echo $mostrar[4] ?></p>
+                    <p class="card-text" style="color: white;"> <?php echo $mostrar[4] ?></p>
                 </div>
                 <div class="card-footer text-muted">
                     Fecha de publicación: <?php echo $mostrar[5] ?>
