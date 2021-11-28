@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-	background-color: #EBECF1;
+	background-color: #dee9ff;
 }
 
 .card {
@@ -17,10 +17,9 @@ body {
     top: 50%;
     left: 50%;
     background: white;
-    
     text-align: center;
     transition: 0.25s;
-    margin-top: 100px
+    margin-top: 60px;
 }
 
 .box input[type="text"],

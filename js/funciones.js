@@ -6,21 +6,39 @@ $( document ).ready(function() {
     $("#lector").hide();
     $("#escritor").hide();
 
+    document.getElementById("formRegPrin").setAttribute("data-target","#myModal2");
+    document.getElementById("btnLector").setAttribute("data-target","#myModal2");
+    document.getElementById("btnEscritor").setAttribute("data-target","#myModal2");
+
     $("#formRegPrin").click(function (e) { 
         e.preventDefault();
+        
         var email = $("#correo").val();
         var user = $("#user").val();
         var pass = $("#password").val();
         var rol = $("#selectRol").val();
 
         if(email == "" || user == "" || pass == "" || rol == "0"){
-            alertify.alert("Complete todos los campos solicitados");
+            var tit="<i class='fas fa-exclamation-triangle'></i> El registro no puede continuar"
+            var body= "Por favor complete todos los campos solicitados."
+            $("#modal-title2").append(tit);
+            $("#modal-body2").append(body);
+            
         }else if(!exp_pass.test(pass)){
-            alertify.alert("La contraseña debe contener mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula y un número");
+            var tit="<i class='fas fa-exclamation-triangle'></i> El registro no puede continuar"
+            var body= "La contraseña debe contener mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula y un número."
+            $("#modal-title2").append(tit);
+            $("#modal-body2").append(body);
         }else{
-            RegistroPorRol();
+            document.getElementById("formRegPrin").removeAttribute("data-target");
+            RegistroPorRol();  
         }
 
+    });
+
+    $("#btnModal2").click(function(e){
+        $("#modal-title2").empty();
+        $("#modal-body2").empty();
     });
 
     function RegistroPorRol(){
@@ -33,20 +51,29 @@ $( document ).ready(function() {
             $("#lector").hide();
             $("#escritor").show();
         }else{
-            alertify.alert("Selecciona un rol");
+            var tit="<i class='fas fa-exclamation-triangle'></i> El registro no puede continuar"
+            var body= "Seleccione un rol"
+            $("#modal-title2").append(tit);
+            $("#modal-body2").append(body);
         }
     }
 
     $("#btnLector").click(function(e){
         e.preventDefault();
-
         if($("#nombreLec").val() == "" || $("#apellidoLec").val()== "" || $("#edadLec").val()== ""
         || $("#generoLec").val()== "0" || $("#categoriaLec").val()== "0"){
-            alertify.alert("Complete todos los campos solicitados");
+            var tit="<i class='fas fa-exclamation-triangle'></i> El registro no puede continuar"
+            var body= "Por favor complete todos los campos solicitados."
+            $("#modal-title2").append(tit);
+            $("#modal-body2").append(body);
         }else if( $("#terminosLec").is(':checked') ){
+            document.getElementById("btnLector").removeAttribute("data-target");
             agregarDatosLector();
         } else {
-            alertify.alert("No puede completar el registro si no acepta los terminos y condiciones");
+            var tit="<i class='fas fa-exclamation-triangle'></i> El registro no puede continuar"
+            var body= "No puede completar el registro si no acepta los terminos y condiciones."
+            $("#modal-title2").append(tit);
+            $("#modal-body2").append(body);
         }
     });
 
@@ -55,16 +82,24 @@ $( document ).ready(function() {
 
         if($("#nombreEsc").val() == "" || $("#apellidoEsc").val()== "" || $("#rfcEsc").val()== "" || $("#edadEsc").val()== ""
         || $("#generoEsc").val()== "0" || $("#direccionEsc").val()== "" || $("#telefonoEsc").val()== "" || $("#referenciasEsc")== "" || $("#categoriaEsc").val()== "0"){
-            alertify.alert("Complete todos los campos solicitados");
+            var tit="<i class='fas fa-exclamation-triangle'></i> El registro no puede continuar"
+            var body= "Por favor complete todos los campos solicitados."
+            $("#modal-title2").append(tit);
+            $("#modal-body2").append(body);
         }else if( $("#terminos").is(':checked') ){
+            document.getElementById("btnEscritor").removeAttribute("data-target");
             agregarDatosEscritor();
         } else {
-            alertify.alert("No puede completar el registro si no acepta los terminos y condiciones");
+            var tit="<i class='fas fa-exclamation-triangle'></i> El registro no puede continuar"
+            var body= "No puede completar el registro si no acepta los terminos y condiciones."
+            $("#modal-title2").append(tit);
+            $("#modal-body2").append(body);
         }
         
     });
 
     function agregarDatosLector() {
+        document.getElementById("btnLector").setAttribute("data-target","#myModal2");
         cadena = "correo=" + $("#correo").val() + "&user=" + $("#user").val() + "&pass=" + $("#password").val() + "&rol=" + $("#selectRol").val()
         + "&nombre=" + $("#nombreLec").val() + "&apellido=" + $("#apellidoLec").val() + "&edad=" + $("#edadLec").val()
         + "&genero=" + $("#generoLec").val() + "&categoria=" + $("#categoriaLec").val();
@@ -74,13 +109,21 @@ $( document ).ready(function() {
             data: cadena,
             success: function (r) {
                 if (r == 11) {
-                    alertify.success("Datos agregados con exito");                  
-                    alertify.alert("Registro completado", function(){
+                    var tit="<i class='fas fa-check-circle'></i> Registro completado"
+                    var body= "Su registro se ha completado correctamente, sera dirigido al login para que pueda ingresar con sus credenciales."
+                    $("#modal-title2").append(tit);
+                    $("#modal-body2").append(body);
+                    $("#btnModal2").click(function(e){
                         $(location).attr('href','login.php');
-                    }); 
+                    });
                 } else {
-                    alertify.success("Lo sentimos, no se pudo completar el registro. Intentelo mas tarde");
-                    alertify.error("Fallo el servidor"); 
+                    var tit="<i class='fas fa-exclamation-triangle'></i> Su registro no se pudo completar"
+                    var body= "Error en el servidor, por favor intentelo mas tarde."
+                    $("#modal-title2").append(tit);
+                    $("#modal-body2").append(body);
+                    $("#btnModal2").click(function(e){
+                        $(location).attr('href','login.php');
+                    });
                 }
             }
     
@@ -88,6 +131,7 @@ $( document ).ready(function() {
     }
 
     function agregarDatosEscritor() {
+        document.getElementById("btnEscritor").setAttribute("data-target","#myModal2");
         cadena = "correo=" + $("#correo").val() + "&user=" + $("#user").val() + "&pass=" + $("#password").val() + "&rol=" + $("#selectRol").val()
         + "&nombre=" + $("#nombreEsc").val() + "&apellido=" + $("#apellidoEsc").val() + "&rfc=" + $("#rfcEsc").val() + "&edad=" + $("#edadEsc").val()
         + "&genero=" + $("#generoEsc").val() + "&direccion=" + $("#direccionEsc").val() + "&telefono=" + $("#telefonoEsc").val() + "&referencias=" + $("#referenciasEsc").val()
@@ -98,13 +142,21 @@ $( document ).ready(function() {
             data: cadena,
             success: function (r) {
                 if (r == 11) {
-                    alertify.success("Datos agregados con exito");                  
-                    alertify.alert("Registro completado", function(){
+                    var tit="<i class='fas fa-check-circle'></i> Registro completado"
+                    var body= "Su registro se ha completado correctamente, sera dirigido al login para que pueda ingresar con sus credenciales."
+                    $("#modal-title2").append(tit);
+                    $("#modal-body2").append(body);
+                    $("#btnModal2").click(function(e){
                         $(location).attr('href','login.php');
-                    }); 
+                    });
                 } else {
-                    alertify.success("Lo sentimos, no se pudo completar el registro. Intentelo mas tarde");
-                    alertify.error("Fallo el servidor"); 
+                    var tit="<i class='fas fa-exclamation-triangle'></i> Su registro no se pudo completar"
+                    var body= "Error en el servidor, por favor intentelo mas tarde."
+                    $("#modal-title2").append(tit);
+                    $("#modal-body2").append(body);
+                    $("#btnModal2").click(function(e){
+                        $(location).attr('href','login.php');
+                    });
                 }
             }
     
@@ -137,6 +189,12 @@ $( document ).ready(function() {
     });
     $("#btnModal").click(function(e){
         $("#modal-body").empty();
+    });
+
+    $("#btnLectorReg, #btnEscritorReg").click(function(e){
+        $("#principal").show();
+        $("#lector").hide();
+        $("#escritor").hide();
     });
         
 });

@@ -30,13 +30,13 @@ session_start();
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="datosLector.php">Información</a>
+                <a class="nav-link" href="datosLector.php"><i class="fas fa-info"></i> Información</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="registroComentarios.php">Registro de comentarios</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="include/salir.php">Cerrar Sesión</a>
+                <a class="nav-link" href="include/salir.php"> <i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
             </li>
         </ul>
     </div>
