@@ -179,8 +179,7 @@ $userN = $_SESSION['username'];
             url: "include/agregarComentario.php",
             data: cadena1,
             success: function(r) {
-                window.alert(r);
-                window.alert("pasa aqui");
+             
 
                 if (r == 1) {
                     alertify.success("Datos agregados con exito");
