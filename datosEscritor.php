@@ -44,7 +44,9 @@ $userN = $_SESSION['username'];
     <center>
     <div class="card text-center" style="max-width: 1100px;">
         <div class="card-header">
+        <font color="white">
             <h2>Información de la cuenta</h2>
+        </font>
         </div>
         <div class="card-body">
 

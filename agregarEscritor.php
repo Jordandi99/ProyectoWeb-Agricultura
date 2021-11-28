@@ -45,7 +45,9 @@ $userN = $_SESSION['username'];
     <center>
     <div class="card-footer text-muted" style="max-width: 700px;">
         <div class="card-body text-center">
+            <font color="white">
             <h5 class="card-title">Escriba su articulo</h5>
+            </font>
             <form id="Maquinas">
                 <?php
                 date_default_timezone_set('America/Mexico_City');
@@ -65,19 +67,25 @@ $userN = $_SESSION['username'];
                 </center>
                 <center>
                 <div class="form-group" style="max-width: 700px;" >
+                <font color="white">
                     <label for="ejemploArea">Fecha</label>
+                </font>
                     <input type="text" style="border-color: black; border-width:2px; border-radius: 10px" class="form-control item" id="fechaArt" name="fechaArt" value=" <?php echo $fecha ?>" disabled>
                 </div>
                 </center>
                 <center>
                 <div class="form-group" style="max-width: 700px;">
+                <font color="white">
                     <label for="ejemploArea">Nombre del articulo</label>
+                </font>
                     <input type="text" style="border-color: black; border-width:2px; border-radius: 10px" class="form-control item" id="nombreArt" name="nombreArt" placeholder="" required>
                 </div>
                 </center>
                 <center>
                 <div class="form-group" style="max-width: 700px;">
+                <font color="white">
                     <label for="ejemploArea">Ingrese su articulo</label>
+                </font>
                     <textarea class="form-control item" style="border-color: black; border-width:2px; border-radius: 10px" id="contArt" rows="5" required></textarea>
                 </div>
                 </center>
@@ -96,7 +104,7 @@ $userN = $_SESSION['username'];
                 
             
                     <center>
-                       <button id="btnguardar" name="btnguardar" class="btn btn-primary">Crear</button>
+                       <button id="btnguardar" name="btnguardar" class="btn btn-success">Crear</button>
                        </center>
                     
                 
