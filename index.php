@@ -29,7 +29,7 @@ session_start();
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Articulos
+                        Categorias
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="agregarEscritor.php">Agregar</a>
