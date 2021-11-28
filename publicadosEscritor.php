@@ -23,11 +23,11 @@ $userN = $_SESSION['username'];
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="datosEscritor.php">Informacion</a>
+                    <a class="nav-link" href="datosEscritor.php"><i class="fas fa-info"></i> Informacion</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Articulos
+                    <i class="fas fa-plus"></i> Articulos
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="agregarEscritor.php">Agregar</a>
@@ -36,7 +36,7 @@ $userN = $_SESSION['username'];
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="include/salir.php">Cerrar Sesión</a>
+                    <a class="nav-link" href="include/salir.php"> <i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                 </li>
             </ul>
         </div>

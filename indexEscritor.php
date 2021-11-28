@@ -27,11 +27,11 @@ $userN = $_SESSION['username'];
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="datosEscritor.php">Informacion</a>
+                    <a class="nav-link" href="datosEscritor.php"><i class="fas fa-info"></i> Informacion</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Articulos
+                    <i class="fas fa-plus"></i> Articulos
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="agregarEscritor.php">Agregar</a>
@@ -40,7 +40,7 @@ $userN = $_SESSION['username'];
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="include/salir.php">Cerrar Sesión</a>
+                    <a class="nav-link" href="include/salir.php"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                 </li>
             </ul>
         </div>
@@ -48,8 +48,8 @@ $userN = $_SESSION['username'];
 
     <div class="container" id="con">
         <div class="card text-center">
-            <div class="card-header">
-                Galeria de imagenes
+            <div class="card-header" style="color: white;">
+                <strong>Galeria de imagenes</strong>
             </div>
             <div class="card-body">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -83,26 +83,14 @@ $userN = $_SESSION['username'];
 
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                            <span class="sr-only">Anterior</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                            <span class="sr-only">Siguiente</span>
                         </a>
                     </div>
 
-                </div>
-                <div class="card-footer text-muted">
-                    <div class="container2 form-group">
-                        <h1>Articulos</h1>
-                        <select class="form-control item" id="cateArt">
-                            <option value="0" selected>Ver todo</option>
-                            <option value="Maquinaria">Maquinaria</option>
-                            <option value="Productos">Productos</option>
-                            <option value="Plagas">Plagas</option>
-                            <option value="Cultivo">Cultivo</option>
-                        </select>
-                    </div>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@
 </head>
 <body>
     <h1 class="header-ed">
-        ¡Atención!
+        ¡Términos y condiciones para escritores!
     </h1>
     <!-- 1er Contenedor -->
     <div class="art-bothside">
@@ -42,26 +42,6 @@
                     </lu>
                 </div>
                 <!-- Fin Terminos -->
-                <!-- Area del formulario -->
-                <form class="terminosL" action="" method="get">
-                    <!-- Aceptacion de Terminos -->
-                    <div class="main">
-                        <br>
-                        <fieldset>
-                            <label>
-                                <input type="checkbox" name="terminos" value="aceptar" required="" /> Acepto los términos y condiciones. </label>
-                        </fieldset>
-                        <br>
-                    </div>
-                    <!-- Fin Aceptacion de Terminos -->
-                    <!-- Botones -->
-                    <div class="btnn">
-                        <button type="submit" value="continuar">Continuar</button>
-                        <button type="button" value="cancelar">Cancelar</button>
-                    </div>
-                    <!-- Fin Botones -->
-                </form>
-                <!-- Fin Area del formulario -->
             </div>
             <!-- Fin 3er Contenedor -->
             <!-- Imagen -->

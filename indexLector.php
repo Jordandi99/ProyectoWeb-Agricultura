@@ -34,7 +34,7 @@ $userN = $_SESSION['username'];
                     <a class="nav-link" href="datosLector.php"><i class="fas fa-info"></i> Información</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registroComentarios.php">Registro de comentarios</a>
+                    <a class="nav-link" href="registroComentarios.php"><i class="fas fa-list"></i> Registro de comentarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="include/salir.php"> <i class="fas fa-sign-out-alt"></i>Cerrar Sesión</a>
@@ -45,8 +45,8 @@ $userN = $_SESSION['username'];
 
     <div class="container" id="con">
         <div class="card text-center">
-            <div class="card-header">
-                Galeria de imagenes
+            <div class="card-header" style="color: white;">
+                <strong>Galeria de imagenes</strong>
             </div>
             <div class="card-body">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -80,26 +80,14 @@ $userN = $_SESSION['username'];
 
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                            <span class="sr-only">Anterior</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                            <span class="sr-only">Siguiente</span>
                         </a>
                     </div>
 
-                </div>
-                <div class="card-footer text-muted">
-                    <div class="container2">
-                        <h1>Articulos</h1>
-                        <select class="form-select" id="cateArt">
-                            <option value="0" selected>Ver todo</option>
-                            <option value="Maquinaria">Maquinaria</option>
-                            <option value="Productos">Productos</option>
-                            <option value="Plagas">Plagas</option>
-                            <option value="Cultivo">Cultivo</option>
-                        </select>
-                    </div>
                 </div>
             </div>
         </div>

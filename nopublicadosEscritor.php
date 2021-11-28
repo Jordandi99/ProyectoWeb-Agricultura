@@ -13,7 +13,7 @@ $userN = $_SESSION['username'];
 
 <body>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
         <a class="navbar-brand" href="indexEscritor.php"><?php echo "Bienvenido $userN" ?> </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -24,11 +24,11 @@ $userN = $_SESSION['username'];
         <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="datosEscritor.php">Informacion</a>
+                    <a class="nav-link" href="datosEscritor.php"><i class="fas fa-info"></i> Informacion</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Articulos
+                    <i class="fas fa-plus"></i> Articulos
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="agregarEscritor.php">Agregar</a>
@@ -37,7 +37,7 @@ $userN = $_SESSION['username'];
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="include/salir.php">Cerrar Sesión</a>
+                    <a class="nav-link" href="include/salir.php"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
                 </li>
             </ul>
         </div>
@@ -111,10 +111,10 @@ $userN = $_SESSION['username'];
     </div>
     <!-- Editar -->
     <div class="modal fade" id="Meditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Editar informacion</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Editar articulo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -137,7 +137,8 @@ $userN = $_SESSION['username'];
                     </div>
                     <label for="marca">Contenido del articulo</label>
                     <div class="form-group">
-                        <input type="text" class="form-control item" id="contenidoArt" placeholder="">
+                        <textarea class="form-control" id="contenidoArt" name="contenidoArt" rows="5"></textarea>
+                        
                     </div>
                     <label for="marca">Estado</label>
                     <div class="form-group">

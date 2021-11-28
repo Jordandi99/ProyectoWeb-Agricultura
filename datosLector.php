@@ -26,7 +26,7 @@ $userN = $_SESSION['username'];
                     <a class="nav-link" href="datosLector.php"> <i class="fas fa-info"></i> Información</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="registroComentarios.php">Registro de comentarios</a>
+                    <a class="nav-link" href="registroComentarios.php"><i class="fas fa-list"></i> Registro de comentarios</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="include/salir.php"> <i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
@@ -37,7 +37,7 @@ $userN = $_SESSION['username'];
 
     <div class="card text-center">
         <div class="card-header">
-            Información de la cuenta
+            Mis datos
         </div>
         <div class="card-body">
 

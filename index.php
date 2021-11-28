@@ -12,7 +12,7 @@ session_start();
 <body>
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <a class="navbar-brand" href="#"><i class="fas fa-tractor"></i> ARTICLES</a>
+        <a class="navbar-brand" href="index.php"><i class="fas fa-tractor"></i> ARTICLES</a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@ session_start();
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <form class="form-inline" method="post" action="categorias/busqueda.php">
-                <input class="form-control mr-sm-2" name="busq" value="" type="text" placeholder="Buscar Articulo">
+                <input class="form-control mr-sm-2" name="busq" value="" type="text" placeholder="Buscar por nombre">
                 <button class="btn btn-success" type="submit">Buscar</button>
             </form>
         </nav>
@@ -29,7 +29,7 @@ session_start();
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Categorias
+                    <i class="fas fa-clipboard-list"></i> Categorias
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="categorias/maquinaria.php">Maquinaria</a>
