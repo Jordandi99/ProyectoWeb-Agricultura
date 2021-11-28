@@ -41,10 +41,10 @@ $userN = $_SESSION['username'];
             </ul>
         </div>
     </nav>
-
-    <div class="card text-center">
+    <center>
+    <div class="card text-center" style="max-width: 1100px;">
         <div class="card-header">
-            Información de la cuenta
+            <h2>Información de la cuenta</h2>
         </div>
         <div class="card-body">
 
@@ -109,29 +109,39 @@ $userN = $_SESSION['username'];
         </div>
         <div class="card-footer text-muted">
             Datos del escritor
+        
         </div>
     </div>
+    </center>
     <!-- Editar -->
     <div class="modal fade" id="Meditar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
+            <div class="modal-content" style="background: #2E2E2E;">
                 <div class="modal-header">
+                    <font color= "#FFFFFF">
                     <h5 class="modal-title" id="exampleModalLabel">Editar informacion</h5>
+                    </font>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <input type="text" hidden="" id="idAuto" name="">
+                    <font color= "#FFFFFF">
                     <label for="marca">Dirección:</label>
+                    </font>
                     <div class="form-group">
                         <input type="text" class="form-control item" id="DireccionEdit" placeholder="Dirección">
                     </div>
+                    <font color= "#FFFFFF">
                     <label for="marca">Telefono:</label>
+                    </font>
                     <div class="form-group">
                         <input type="text" class="form-control item" id="telEdit" placeholder="Telefono">
                     </div>
+                    <font color= "#FFFFFF">
                     <label for="marca">Categoria</label>
+                    </font>
                     <div class="form-group">
                         <select class="form-control item" id="categoriaEdit">
                             <option value="0" select>Seleccione una opción</option>

@@ -42,8 +42,9 @@ $userN = $_SESSION['username'];
         </div>
     </nav>
 
-    <div class="card-footer text-muted">
-        <div class="card-body">
+    <center>
+    <div class="card-footer text-muted" style="max-width: 700px;">
+        <div class="card-body text-center">
             <h5 class="card-title">Escriba su articulo</h5>
             <form id="Maquinas">
                 <?php
@@ -51,8 +52,9 @@ $userN = $_SESSION['username'];
                 $fecha = date("Y-m-d");
                 ?>
 
-                <div class="form-group">
-                    <select class="form-control item" id="cateArt">
+              <center>
+                <div class="form-group" style="max-width: 700px;">
+                    <select class="form-control item" id="cateArt" style="border-color: black; border-width:2px; border-radius: 10px">
                         <option selected>Seleccione una categoria</option>
                         <option value="Maquinaria">Maquinaria</option>
                         <option value="Productos">Productos</option>
@@ -60,42 +62,51 @@ $userN = $_SESSION['username'];
                         <option value="Cultivo">Cultivo</option>
                     </select>
                 </div>
-
-                <div class="form-group">
+                </center>
+                <center>
+                <div class="form-group" style="max-width: 700px;" >
                     <label for="ejemploArea">Fecha</label>
-                    <input type="text" class="form-control item" id="fechaArt" name="fechaArt" value=" <?php echo $fecha ?>" disabled>
+                    <input type="text" style="border-color: black; border-width:2px; border-radius: 10px" class="form-control item" id="fechaArt" name="fechaArt" value=" <?php echo $fecha ?>" disabled>
                 </div>
-                <div class="form-group">
+                </center>
+                <center>
+                <div class="form-group" style="max-width: 700px;">
                     <label for="ejemploArea">Nombre del articulo</label>
-                    <input type="text" class="form-control item" id="nombreArt" name="nombreArt" placeholder="" required>
+                    <input type="text" style="border-color: black; border-width:2px; border-radius: 10px" class="form-control item" id="nombreArt" name="nombreArt" placeholder="" required>
                 </div>
-                <div class="form-group">
+                </center>
+                <center>
+                <div class="form-group" style="max-width: 700px;">
                     <label for="ejemploArea">Ingrese su articulo</label>
-                    <textarea class="form-control item" id="contArt" rows="5" required></textarea>
+                    <textarea class="form-control item" style="border-color: black; border-width:2px; border-radius: 10px" id="contArt" rows="5" required></textarea>
                 </div>
-                <div class="form-group">
-                    <select class="form-control item" id="statusArt">
+                </center>
+                <center>
+                <div class="form-group" style="max-width: 700px;">
+                    <select class="form-control item" style="border-color: black; border-width:2px; border-radius: 10px" id="statusArt">
                         <option value="0" selected>Seleccione el estado del articulo</option>
                         <option value="Publicado">Publicar</option>
                         <option value="No publicado">No publicar</option>
                         >
                     </select>
                 </div>
+                </center>
 
 
-                <div class="card text-center">
+                
             
-                    <div class="card-body">
+                    <center>
                        <button id="btnguardar" name="btnguardar" class="btn btn-primary">Crear</button>
-                    </div>
+                       </center>
                     
-                </div>
+                
 
 
             </form>
         </div>
 
     </div>
+    </center>
 
 </body>
 <script>
