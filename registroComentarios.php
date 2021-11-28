@@ -67,7 +67,8 @@ $userN = $_SESSION['username'];
                     ON (C.id_articulo=A.id_articulo)
                     JOIN escritor E
                     ON(A.id_escritor=E.id_escritor)
-                    WHERE U.username = '$userN'";
+                    WHERE U.username = '$userN'
+                    ORDER BY C.fecha DESC";
 
                     $resultado = mysqli_query($conexion, $articulo);
                     while ($mostrar = mysqli_fetch_row($resultado)) {
