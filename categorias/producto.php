@@ -1,6 +1,6 @@
 <?php require_once '../include/head.php'; ?>
 <link rel="stylesheet" href="../css/estilos_home.css">
-<title>Producto</title>
+<title>Productos</title>
 </head>
 
 <?php
