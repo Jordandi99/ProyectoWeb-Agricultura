@@ -20,7 +20,7 @@
 </head>
 <body>
     <h1 class="header-ed">
-        ¡Términos y condiciones para escritores!
+        ¡Términos y condiciones para lectores!
     </h1>
     <!-- 1er Contenedor -->
     <div class="art-bothside">
@@ -29,16 +29,16 @@
             <!-- 3er Contenedor -->
             <div class="art-right-ed">
                 <p>
-                    <strong>Al registrarse como escritor en el sitio, aceptarás
-                    las siguientes normas de nuestra comunidad:</strong>
+                    <strong>Al registrarse como uno de nuestros lectores, aceptarás las
+                    siguientes normas de nuestra comunidad:</strong>
                 </p>
                 <!-- Terminos -->
                 <div class="main">
                     <lu>
-                        <li>Como escritor deberás iniciar sesión en el sitio para ser capaz de de publicar articulos.</li>
-                        <li>Una vez creado su usuario, no podrá modificar algunos de sus datos personales, por lo que le pedimos sea cuidados@ a la hora de registrarse.</li>
-                        <li>Queda prohibido el uso de palabras altisonantes en la redacción de sus artículos.</li>
-                        <li>De no cumplir estos lineamientos, es posible que su usuario sea eliminado del sitio, junto con todos los articulos publicados bajo el mismo.</li>
+                        <li>Como lector de nuestra comunidad, solo prodrás interactuar con nuestros escritores, comentando en sus respectivos posts.</li>
+                        <li>Los comentarios que realice serán moderados por nuestro(s) administrador(es).</li>
+                        <li>Queda totalmente prohibido el uso de lenguaje altisonante o agresivo en el área de comentarios.</li>
+                        <li>De no cumplir con la norma anterior de nuestra comunidad, su cuenta será eliminada y su(s) comentario(s) serán eliminados del tablón.</li>
                     </lu>
                 </div>
                 <!-- Fin Terminos -->
@@ -46,15 +46,15 @@
             <!-- Fin 3er Contenedor -->
             <!-- Imagen -->
             <div class="art-left-ed">
-                <img src="img/img_condiciones.jpg" alt="">
+                <img src="img/img_terminos.png" alt="">
             </div>
             <!-- Fin Imagen -->
         </div>
-        <!-- 2do Contenedor -->
+        <!-- Fin 2do Contenedor -->
         <!-- Leyenda -->
         <div class="footer">
             <p>
-                &Agricultura_U5
+                AgriculturaU5
             </p>
         </div>
         <!-- Fin Leyenda -->

@@ -5,7 +5,7 @@
 
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">ARTICLES</a>
+    <a class="navbar-brand" href="#"><i class="fas fa-tractor"></i> ARTICLES</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link center" href="index.php">Regresar</a>
+                <a class="nav-link center" href="index.php"><i class="fas fa-sign-out-alt"></i> Inicio</a>
             </li>
         </ul>
     </div>
@@ -25,7 +25,7 @@
         <div class="col-md-6">
             <div class="card">
                 <form class="box" method="post" action="include/log.php">
-                    <h1>Login</h1>
+                    <h1><i class="fas fa-tractor"></i> Login</h1>
                     <p class="text-muted"> Ingresa tu nombre de usuario y contraseña</p> 
                     <input type="text" name="nombre" placeholder="Usuario"> 
                     <input type="password" name="contraseña" placeholder="Contraseña"> 

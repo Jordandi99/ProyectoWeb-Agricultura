@@ -6,7 +6,7 @@
 
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand" href="#">ARTICLES</a>
+    <a class="navbar-brand" href="index.php"><i class="fas fa-tractor"></i> ARTICLES</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link center" href="login.php">Regresar</a>
+                <a class="nav-link center" href="login.php"><i class="fas fa-sign-out-alt"></i> Iniciar sesión</a>
             </li>
         </ul>
     </div>
@@ -47,11 +47,39 @@
       </div>
     </div>
   </div>
+
+    <!-- The Modal 2 -->
+    <div class="modal fade" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-title2"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body" id="modal-body2">
+          
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" id = "btnModal2" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
   
 </div>
 
     <div class="registration-form" id="principal">
         <form>
+            <div class="form-group text-center">
+                <h5 style="color: #489EEA;">Registro principal</h5>
+            </div>
             <div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>
@@ -72,13 +100,16 @@
                 </select>
             </div>
             <div class="form-group">
-                <button type="button" id="formRegPrin" class="btn btn-block create-user">Siguiente</button>
+                <button type="button" id="formRegPrin" class="btn btn-block create-user" data-toggle="modal" data-target="#myModal2">Siguiente</button>
             </div>
         </form>
     </div>
 
     <div class="registration-form" id="lector">
         <form>
+        <div class="form-group text-center">
+                <h5 style="color: #489EEA;">Registro para lectores</h5>
+            </div>
             <div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>
@@ -114,13 +145,19 @@
             </div>
 
             <div class="form-group">
-                <button type="button" id="btnLector" class="btn btn-block create-user">Terminar Registro</button>
+                <button type="button" id="btnLector" class="btn btn-block create-user" data-toggle="modal" data-target="#myModal2">Terminar Registro</button>
+            </div>
+            <div class="form-group">
+                <button type="button" id="btnLectorReg" class="btn btn-block create-user">Regresar</button>
             </div>
         </form>
     </div>
 
     <div class="registration-form" id="escritor">
         <form>
+        <div class="form-group text-center">
+                <h5 style="color: #489EEA;">Registro para escritores</h5>
+            </div>
             <div class="form-icon">
                 <span><i class="icon icon-user"></i></span>
             </div>
@@ -168,7 +205,10 @@
             </div>
 
             <div class="form-group">
-                <button type="button" id="btnEscritor" class="btn btn-block create-user">Terminar Registro</button>
+                <button type="button" id="btnEscritor" class="btn btn-block create-user" data-toggle="modal" data-target="#myModal2">Terminar Registro</button>
+            </div>
+            <div class="form-group">
+                <button type="button" id="btnEscritorReg" class="btn btn-block create-user">Regresar</button>
             </div>
         </form>
     </div>
