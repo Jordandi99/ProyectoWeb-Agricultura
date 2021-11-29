@@ -5,9 +5,6 @@ $conexion
 ?>
 <link rel="stylesheet" href="css/estilos_home.css">
 <title>Articulos publicados</title>
-/*
-testing righ
-*/
 </head>
 <?php
 session_start();

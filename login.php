@@ -2,9 +2,6 @@
 <title>Login</title>
 <link rel="stylesheet" href="css/estilos_login.css">
 </head>
-/*
-testing righ
-*/
 <body>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
     <a class="navbar-brand" href="#"><i class="fas fa-tractor"></i> ARTICLES</a>
