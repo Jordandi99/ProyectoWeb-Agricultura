@@ -67,16 +67,14 @@ session_start();
         ?>
             <div class="card text-center" style="margin-top: 50px;">
                 <div class="card-header">
-                    <strong style="color: white;> Autor: <?php echo $mostrar[0] . " " . $mostrar[1] ?> </strong>
-                    <?php echo $mostrar[3] ?>
+                    <strong style="color: white;"> Autor: <?php echo $mostrar[0] . " " . $mostrar[1] ?> </strong> 
                 </div>
                 <div class=" card-header">
                         <strong style="color: white;"> Categoria: <?php echo $mostrar[2] ?> </strong>
-                        <?php echo $mostrar[3] ?>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title"><Strong style="color: white;"> Titulo: <td><?php echo $mostrar[3] ?></td> </Strong></h5>
-                    <p class="card-text"> <?php echo $mostrar[4] ?></p>
+                    <p class="card-text" style="color: white;"> <?php echo $mostrar[4] ?></p>
                 </div>
                 <div class="card-footer text-muted">
                     Fecha de publicación: <?php echo $mostrar[5] ?>
