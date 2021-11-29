@@ -20,8 +20,8 @@ $busq = $_POST['busq'];
         </button>
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <form class="form-inline" action="/action_page.php">
-                <input class="form-control mr-sm-2" type="text" placeholder="Buscar por nombre">
+            <form class="form-inline" method="post" action="busqueda.php">
+                <input class="form-control mr-sm-2" name="busq" value="" type="text" placeholder="Buscar por nombre">
                 <button class="btn btn-success" type="submit">Buscar</button>
             </form>
         </nav>
