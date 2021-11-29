@@ -50,7 +50,7 @@ $busq = $_POST['busq'];
 
 
     <div class="container" style="margin-top: 50px;">
-        <h1 class="text-center" style="color: white;"><strong> Articulos de maquinaria</strong></h1>
+        <h1 class="text-center" style="color: white;"><strong> Artículos</strong></h1>
 
         <?php
         $articulo = "SELECT E.nombre,E.apeP,A.categoria,A.nom,A.cuerpo,A.fecha,U.username
@@ -68,16 +68,14 @@ $busq = $_POST['busq'];
         ?>
             <div class="card text-center" style="margin-top: 50px;">
                 <div class="card-header">
-                    <strong style="color: white;> Autor: <?php echo $mostrar[0] . " " . $mostrar[1] ?> </strong>
-                    <?php echo $mostrar[3] ?>
+                    <strong style="color: white;"> Autor: <?php echo $mostrar[0] . " " . $mostrar[1] ?> </strong> 
                 </div>
                 <div class=" card-header">
-                        <strong style="color: white;"> Categoria: <?php echo $mostrar[2] ?> </strong>
-                        <?php echo $mostrar[3] ?>
+                        <strong style="color: white;"> Categoría: <?php echo $mostrar[2] ?> </strong>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title"><Strong style="color: white;"> Titulo: <td><?php echo $mostrar[3] ?></td> </Strong></h5>
-                    <p class="card-text"> <?php echo $mostrar[4] ?></p>
+                    <h5 class="card-title"><Strong style="color: white;"> Título: <td><?php echo $mostrar[3] ?></td> </Strong></h5>
+                    <p class="card-text" style="color: white;"> <?php echo $mostrar[4] ?></p>
                 </div>
                 <div class="card-footer text-muted">
                     Fecha de publicación: <?php echo $mostrar[5] ?>
