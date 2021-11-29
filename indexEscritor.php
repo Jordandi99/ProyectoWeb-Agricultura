@@ -2,6 +2,9 @@
 <?php require_once 'include/head.php'; ?>
 <link rel="stylesheet" href="css/estilos_home.css">
 <title>Inicio Escritor</title>
+/*
+testing righ
+*/
 </head>
 <?php
 session_start();

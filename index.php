@@ -2,7 +2,9 @@
 <link rel="stylesheet" href="css/estilos_home.css">
 <title>Proyecto Agricultura</title>
 </head>
-
+/*
+testing righ
+*/
 <?php
 require_once 'include/conexion.php';
 $conexion;
