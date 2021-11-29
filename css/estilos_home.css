@@ -1,56 +1,16 @@
 
-#con {
-
-    margin-top: 50px;
-    padding-left: 300px;
-    padding-right: 300px;
-    background-image: url(../img/agricultura.jpg);
-    background-color: rgb(0 0 0 / 70%);
-    background-color: rgba(0, 0, 0, .7);
-
-}
-
-.jumbotron {
-    padding-top: 0;
-    padding-bottom: 10px;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-.container {
-    margin-top: 50px;
-    padding-left: 300px;
-    padding-right: 300px;
-    background-image: url(img/agricultura.jpg);
-    background-color: rgb(0 0 0 / 70%);
-    /** Otra opción **/
-    background-color: rgba(0, 0, 0, .7);
-
-}
-
-/**#navbarNavAltMarkup {
-    justify-content: space-between;
-    flex-direction: column;
-    display: flex;
-}
-
-#btnB{
-    justify-content: flex-start;
-  
-} */
-
-.jumbotron {
-    padding-bottom: 10px;
-    margin-bottom: 0px;
-    text-align: center;
-}
-
-
-
-
-
 body {
-    background-color: #e1cfa9;
+    background-color: #003545;
+}
+
+#con {
+    margin-top: 50px;
+    padding-left: 300px;
+    padding-right: 300px;
+    background-image: url(../img/img3.jpg);
+    background-color: rgb(0 0 0 / 70%);
+    background-color: rgba(0, 0, 0, .7);
+    /*filter: brightness(150%);*/
 }
 
 .Short {
@@ -96,28 +56,16 @@ body {
     font-weight: 500;
     font-size: 12px;
 }
-#inpB{
-    position: relative;
-    left: 650px;
-}
-#btnB{
-    position: relative;
-    left: 650px;
-}
-#inicia{
-    position: relative;
-    left: 700px;
 
-}
 .carousel-caption{
   font-size: large;
 
 }
 .card-body{
-    background: #FFCC33;
+    background: #00454A;
 }
 .card-header{
-    background: #669933;
+    background: #3C6562;
 }
 
 
