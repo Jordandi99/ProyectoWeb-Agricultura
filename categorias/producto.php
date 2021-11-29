@@ -57,7 +57,7 @@ session_start();
                     ON (E.id_escritor=A.id_escritor)
                     JOIN usuarios U
                     ON(U.id_usuario=E.id_usuario)
-                    WHERE A.estatus='Publicado' and A.categoria='Producto'";
+                    WHERE A.estatus='Publicado' and A.categoria='Productos'";
 
 
         $resultado = mysqli_query($conexion, $articulo);
